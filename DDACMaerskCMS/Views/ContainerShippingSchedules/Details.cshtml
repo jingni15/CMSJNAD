@@ -1,0 +1,74 @@
+﻿@model DDACMaerskCMS.Models.ContainerShippingSchedule
+
+@{
+    ViewBag.Title = "Shipping Schedule Details";
+}
+
+<h2>Shipping Schedule Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship.ShipName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship.ShipName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Container.ContainerDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Container.ContainerDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureYardLocation.YardName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureYardLocation.YardName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArrivalYardLocation.YardName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArrivalYardLocation.YardName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArrivalDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArrivalDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceAmount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContainerShippingScheduleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

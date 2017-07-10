@@ -1,0 +1,33 @@
+﻿@model DDACMaerskCMS.Models.Container
+
+@{
+    ViewBag.Title = "Container Details";
+}
+
+<h2>Container Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContainerDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContainerDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContainerWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContainerWeight)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContainerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

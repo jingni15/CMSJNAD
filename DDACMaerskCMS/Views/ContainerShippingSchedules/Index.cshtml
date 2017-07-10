@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DDACMaerskCMS.Models.ContainerShippingSchedule>
+
+@{
+    ViewBag.Title = "Shipping Schedule Index";
+}
+
+<h2>Shipping Schedule Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ship.ShipName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Container.ContainerDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureYardLocation.YardName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalYardLocation.YardName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceAmount)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ship.ShipName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Container.ContainerDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureYardLocation.YardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalYardLocation.YardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceAmount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ContainerShippingScheduleID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ContainerShippingScheduleID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ContainerShippingScheduleID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style='text-align: center;padding: 30px;margin-bottom: 30px;font-size: 21px;font-weight: 200;line-height: 2.1428571435;'>
+    <div style='font-family: "Matura MT Script Capitals";font-weight: 500;font-size: 80px;line-height: 1.1;'>Maersk Line</div><br>
+    <div style='font-family: "Matura MT Script Capitals";font-weight: 200;font-size: 45px;line-height: 1.1;'>Container Management System (CMS)</div>
+</div>
+<br>
+
+<div class="row" style='text-align:center'>
+    <div class="col-md-2"></div>
+    <div class="col-md-4" style='background-color:floralwhite; opacity:0.9; border:2px solid black; border-radius: 10px; text-align:center'>
+
+        <h2>Ship Details</h2>
+        <a href='@Url.Action("Index", "Ships")'>
+            <img src='@Url.Content("http://www.freeiconspng.com/uploads/ship-icon--spanish-travel-iconset--unclebob-2.png")' style="width:150px;height:150px;" />
+        </a><br><br><br>
+    </div>
+    <div class="col-md-4" style='background-color:floralwhite; opacity:0.9; border:2px solid black; border-radius: 10px; text-align:center'>
+
+        <h2>Container Details</h2>
+        <a href='@Url.Action("Index", "Containers")'>
+            <img src='@Url.Content("https://d30y9cdsu7xlg0.cloudfront.net/png/47752-200.png")' style="width:150px;height:150px;" />
+        </a><br><br><br>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4" style='background-color:floralwhite; opacity:0.9; border:2px solid black; border-radius: 10px; text-align:center'>
+
+        <h2>Yard Details</h2>
+        <a href='@Url.Action("Index", "YardLocations")'>
+            <img src='@Url.Content("https://openclipart.org/image/800px/svg_to_png/218695/port.png")' style="width:150px;height:150px;" />
+        </a><br><br><br>
+    </div>
+    <div class="col-md-4" style='background-color:floralwhite; opacity:0.9; border:2px solid black; border-radius: 10px; text-align:center'>
+
+        <h2>Shipping Details</h2>
+        <a href='@Url.Action("Index", "ContainerShippingSchedules")'>
+            <img src='@Url.Content("https://www.tsl.texas.gov/sites/default/files/public/tslac/slrm/landingpage/retentionschedule.png")' style="width:150px;height:150px;" />
+        </a><br><br><br>
+    </div>
+    <div class="col-md-2"></div>
+</div>
